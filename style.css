@@ -4,6 +4,9 @@
 
 
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     position: relative;
 }
@@ -37,12 +40,32 @@ header .nav-header {
 .logo {
     height: 50px;
 }
+.navbar {
+    height: auto !important;
+    
+   
+}
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: rgb(64, 207, 212) !important;
+}
+.fixed-navbar .links a {
+    color: rgb(93, 107, 107);
+}
+.fixed-navbar .links a:hover {
+    color: rgb(64, 207, 212);
+}
 
 header .navbar ul{
     display: flex;
     align-items: center;
     gap: 36px;
     list-style: none;
+    
 
 }
 header .navbar ul a {
@@ -50,7 +73,7 @@ header .navbar ul a {
     color: white;
     font-size: 24px;
     text-decoration: none;
-    font-weight: 00;
+    
 }
 
 .banner {
@@ -113,7 +136,12 @@ header .header-button:hover {
 #tours {
     background-color: rgb(241, 245, 248);
 }
+.toggle {
+    display: block !important;
+    opacity: 100% !important;
 
+    
+}
 
 #footer {
     display: flex;
@@ -147,11 +175,22 @@ header .header-button:hover {
         
         
     }
+    header .nav-header img {
+        margin-top: 20px;
+    }
+    header .navbar{
+        display: none;
+        transition: bottom 300ms linear;
+    }
+
     header .navbar ul {
+        
         flex-direction: column;
         justify-content: start;
         margin-right: auto;
         margin-bottom: 16px;
+        
+        
         
     }
     header .navbar ul a {
@@ -163,7 +202,18 @@ header .header-button:hover {
         display: block;
         position: absolute;
         right: 50px;
-        top: 40px;
+        top: 30px;
+        height: 35px;
+        width: 25px;
+        border: none;
+        background-color: white;
+        
+    }
+    .hamburger-menu:hover {
+        color: rgb(64, 207, 212);
+        
+        border: 2px solid rgb(64, 207, 212) ;
+        
     }
     
 
